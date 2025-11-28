@@ -79,14 +79,14 @@ function App(){
     <AboutTwistory />
     <Footer/>
 
-    {/* <PromptInput prompt={prompt} setPrompt={setPrompt} />
+    <PromptInput prompt={prompt} setPrompt={setPrompt} />
     <StyleSelector style={style} setStyle={setStyle} />
 
     <button onClick={handleGenerate} disabled={!prompt.trim() || loading}>
       {loading ? "Generating..." : "Generate"}
     </button>
 
-    <OutputDisplay output={output} /> */}
+    <OutputDisplay output={output} />
 
     </div>
     
