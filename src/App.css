@@ -1,42 +1,156 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  background-color: #111; /* optional dark bg */
+  font-family: sans-serif;
+}
+
+/* APP CONTAINER */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children */
+  width: 100%;
+  max-width: 1200px; /* limit container width */
+  padding: 0 20px; /* side padding */
+  box-sizing: border-box;
+}
+
+/* NAVBAR  */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;      
+  height: 70px;
+
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-left{
+  padding-left: 3%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar-right {
+  display: flex;
+  gap: 25px;
+  padding-right: 3%;
 }
 
-.card {
-  padding: 2em;
+.navbar-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.25s, text-shadow 0.25s;
 }
 
-.read-the-docs {
+.navbar-right a:hover {
+  opacity: 0.75;
+  text-shadow: 0 0 6px white;
+}
+
+.navbar.scrolled {
+  background-color: black;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* HERO SECTION */
+.hero-container {
+  text-align: center;
+  padding-top: 80px; 
+  
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+.example-bubbles {
+  display: flex;
+  justify-content: center; 
+  gap: 15px; 
+  margin-bottom: 30px;
+  flex-wrap: wrap; 
+  align-items: center;
+}
+
+.example-bubble {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 16px;
+  font-size: 0.95rem; 
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 140px; 
+  text-align: center;
+}
+
+.launch-button {
+  background: #ffc300; 
+  color: black;
+  font-size: 1.1rem; 
+  font-weight: 600;
+  padding: 12px 24px; 
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  margin-bottom: 40px;
+}
+
+.launch-button:hover {
+  transform: scale(1.05);
+  background: #ffcf33;
+}
+
+.shuttle-placeholder {
+  height: 220px;
+  width: 100%;
+  max-width: 600px; 
+  border: 2px dashed #888;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 80px;
 }
+
+
