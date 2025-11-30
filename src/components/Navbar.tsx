@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <h2 className="logo" onClick={scrollToTop}>Twistory</h2>
+        <h1 className="logo" onClick={scrollToTop}>Twistory</h1>
       </div>
 
       <div className="navbar-right">

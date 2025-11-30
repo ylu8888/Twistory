@@ -10,17 +10,17 @@ const HowItWorks = () => {
 
       <div className="steps-container">
         <div className="step">
-          <h3>1. Enter a Prompt</h3>
+          <h3>1. Enter a Prompt 📝</h3>
           <p>Describe your “what-if” scenario in the input box</p>
         </div>
 
         <div className="step">
-          <h3>2. Pick a Style</h3>
+          <h3>2. Pick a Style 🎨</h3>
           <p>Choose how the AI presents your alternate history: Newspaper, Blog, Tweet, or Default</p>
         </div>
 
         <div className="step">
-          <h3>3. Generate</h3>
+          <h3>3. Generate 🚀</h3>
           <p>Click the generate button and see the AI bring your alternate reality to life</p>
         </div>
       </div>

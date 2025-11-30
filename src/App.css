@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
@@ -5,8 +7,10 @@ body, html {
   display: flex;
   justify-content: center; 
   background-color: #111; 
-  font-family: sans-serif;
+  font-family: 'Monserrat', sans-serif;
   scroll-behavior: smooth;
+
+  background: linear-gradient(180deg, #07000e 0%, #110232 50%, #0c0117 100%);
 }
 
 /* APP CONTAINER */
@@ -26,12 +30,17 @@ body, html {
   top: 0;
   width: 100%;      
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.85);
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  /* background-color: #040109; */
+
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(4px);
+  
   z-index: 1000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -39,8 +48,17 @@ body, html {
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: #5f0cb7; 
+
+}
+
+.logo:hover {
+  opacity: 0.85;
+  text-shadow: 0 0 6px #4b1289;
+  transform: scale(1.025);
+  transition: opacity 0.25s, text-shadow 0.25s, scale 0.5s;
+  
 }
 
 .navbar-left{
@@ -73,7 +91,7 @@ body, html {
 /* HERO SECTION */
 .hero-container {
   text-align: center;
-  padding-top: 80px; 
+  padding-top: 70px; 
   max-width: 900px;
   margin: 0 auto;
   color: white;
@@ -86,7 +104,7 @@ body, html {
 
 .hero-title {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 100;
   margin-bottom: 12px;
   
 }
@@ -120,13 +138,14 @@ body, html {
 }
 
 .launch-button {
-  background: #5f0cb7; 
+  background: linear-gradient(180deg, #4e0893 0%, #400eae 50%, #28054a 100%);
   color: black;
   font-size: 1rem; 
   font-weight: 600;
+  width: 150px;
   padding: 12px 24px; 
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
   margin-bottom: 40px;
@@ -135,6 +154,7 @@ body, html {
 .launch-button:hover {
   transform: scale(1.05);
   background: #5903bc;
+  
 }
 
 .shuttle-container {
@@ -171,7 +191,7 @@ body, html {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #5f0cb7; 
+  color: #5c13aa; 
 }
 
 .how-it-works-text {
@@ -264,7 +284,11 @@ body, html {
   width: 145.5%; 
   bottom: 0;
   padding: 20px 40px;
-  background-color: rgba(0, 0, 0, 0.85);
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  /* background-color: #040109; */
+
+  background-color: rgba(0, 0, 0, 0.7);
+
   color: white;
   backdrop-filter: blur(4px);
   font-size: 0.9rem;
