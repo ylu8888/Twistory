@@ -1,10 +1,14 @@
+import {useState} from "react";
 import shuttleImg from '../assets/spaceshuttle.png';
 
 const HeroSection = () => {
+  const [launched, setLaunched] = useState(false);
+
   return (
 
-    <div className="hero-container">
-
+    <div className={`hero-container ${launched ? "launch-active" : ""}`}>
+      {!launched && (
+      <>
       <h1 className="hero-title">History, but with a <span className="heroSpan" style={{ color: '#5f0cb7', fontWeight: 'bold'}}>Twist</span></h1>
 
       <p className="hero-subtext">
@@ -21,12 +25,15 @@ const HeroSection = () => {
 
       </div>
 
-      <button className="launch-button">Launch     ▶</button>
+      <button className="launch-button" onClick={() => setLaunched(true)}>Launch     ▶</button>
 
-      <div className="shuttle-container">
-       
-       <img className="shuttle-img" src={shuttleImg} alt="Space Shuttle"></img>
+      </>
+      )}
 
+     
+
+      <div className={`shuttle-container ${launched ? "shuttle-launch" : ""}`}>
+        <img className="shuttle-img" src={shuttleImg} alt="shuttle" />
       </div>
 
     </div>
