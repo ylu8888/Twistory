@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       </div>
 
-      <button className="launch-button" onClick={() => setLaunched(true)}>Launch     ▶</button>
+      <button className="launch-button" onClick={() => setLaunched(true)}>Launch&nbsp;&nbsp;&nbsp;▶</button>
 
       </>
       )}
