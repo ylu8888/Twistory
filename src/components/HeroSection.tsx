@@ -1,12 +1,18 @@
-import {useState} from "react";
+import type { ReactNode } from "react";
+import { useState } from "react";
 import shuttleImg from '../assets/spaceshuttle.png';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  children?: ReactNode;
+}
+
+const HeroSection = ({ children }: HeroSectionProps) => {
   const [launched, setLaunched] = useState(false);
 
   return (
 
     <div className={`hero-container ${launched ? "launch-active" : ""}`}>
+
       {!launched && (
       <>
       <h1 className="hero-title">History, but with a <span className="heroSpan" style={{ color: '#5f0cb7', fontWeight: 'bold'}}>Twist</span></h1>
@@ -25,15 +31,20 @@ const HeroSection = () => {
 
       </div>
 
-      <button className="launch-button" onClick={() => setLaunched(true)}>Launch&nbsp;&nbsp;&nbsp;▶</button>
+      <button className="launch-button" onClick={() => setLaunched(true)}>
+        Launch&nbsp;&nbsp;&nbsp;▶
+      </button>
 
       </>
       )}
 
-     
-
       <div className={`shuttle-container ${launched ? "shuttle-launch" : ""}`}>
         <img className="shuttle-img" src={shuttleImg} alt="shuttle" />
+
+        <div className={`cockpit-ui ${launched ? "visible" : ""}`}>
+          {children}
+        </div>
+
       </div>
 
     </div>

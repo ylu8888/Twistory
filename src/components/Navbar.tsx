@@ -16,7 +16,12 @@ const Navbar = () => {
       <div className="navbar-right">
         <a href="#how">How It Works </a>
         <a href="#about">About Twistory </a>
-        <a href="#contact">Contact</a>
+        <a 
+          href="https://www.linkedin.com/in/yang-lu-a47441265/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Contact</a>
+
       </div>
       
     </nav>

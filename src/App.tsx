@@ -77,9 +77,21 @@ function App(){
 
     <Navbar></Navbar>
 
-    <div id="home">
-      <HeroSection />
-    </div>
+    <HeroSection>
+      <PromptInput prompt={prompt} setPrompt={setPrompt} />
+
+      <StyleSelector style={style} setStyle={setStyle} />
+
+      <button 
+        onClick={handleGenerate} 
+        disabled={!prompt.trim() || loading}
+        className="generate-btn"
+      >
+        {loading ? "Generating..." : "Generate"}
+      </button>
+
+      <OutputDisplay output={output} />
+    </HeroSection>
 
     <div id="how">
       <HowItWorks />
@@ -93,14 +105,7 @@ function App(){
       <Footer />
     </div>
 
-    <PromptInput prompt={prompt} setPrompt={setPrompt} />
-    <StyleSelector style={style} setStyle={setStyle} />
-
-    <button onClick={handleGenerate} disabled={!prompt.trim() || loading}>
-      {loading ? "Generating..." : "Generate"}
-    </button>
-
-    <OutputDisplay output={output} />
+   
 
     </div>
     

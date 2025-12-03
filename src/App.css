@@ -31,7 +31,7 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;      
-  height: 60px;
+  height: 50px;
   /* background-color: rgba(0, 0, 0, 0.85); */
   /* background-color: #040109; */
 
@@ -48,7 +48,7 @@ body, html {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: 0.8px;
   color: #d9d4de; 
@@ -76,7 +76,7 @@ body, html {
 .navbar-right a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 14px;
   transition: opacity 0.25s, text-shadow 0.25s;
 }
 
@@ -187,11 +187,11 @@ body, html {
 }
 
 .shuttle-launch {
-  height: 80vh !important;
-  max-width: 90vw !important;
+  height: 85vh !important;
+  max-width: 100vw !important;
   border-radius: 20px;
   border: 4px solid #aaa;
-  margin-top: 20px;
+  margin-top: -10px;
 }
 
 .shuttle-launch .shuttle-img {
@@ -206,6 +206,7 @@ body, html {
   max-width: 900px;
   margin: 10px auto; 
   margin-top: 80px;
+  margin-bottom: 80px;
   padding: 0 20px;
   text-align: center;
   color: white;
@@ -257,7 +258,7 @@ body, html {
 .why-built-container {
   max-width: 900px;
   margin: 80px auto;
-  margin-top: 140px;
+  margin-top: 80px;
   padding: 0 20px;
   text-align: center;
   color: white;
@@ -358,6 +359,23 @@ body, html {
   text-shadow: 0 0 4px #ffc300;
 }
 
+/* COCKPIT SECTION  */
+
+.cockpit-ui {
+  position: absolute;
+  top: 55%;     
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; 
+}
+
+.cockpit-ui.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 
