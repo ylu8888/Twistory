@@ -28,24 +28,17 @@ function App(){
 
       const styleInstructions: Record<string, string> = {
         newspaper: `You are HistoryTwister, an AI that creates alternate history scenarios. 
-        Write a concise newspaper article, but keep it relatively short and readable. ONLY 250 WORDS MAX.
-        only generate the newspaper do not say anything else like 'heres the newspaper'
-        stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario`,
+        Write a concise newspaper article, only 200 words max. Stay on topic, if asked for chicken curry dishes, deny request.`,
 
-        tweet: `Pretend you are twitter users. Write 5 tweets based as if the alternate history really happened in real life. 
-        Be creative, not too long, dont make all the tweets the same, you can use hashtags if you want but keep it one hashtag max, try to emulate real twitter users. 
-        Also do not put numbers, only generate the tweet do not say anything else like 'here are the five tweets
-        stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario'`,
+        tweet: `Pretend you are twitter users. Write 5 tweets as if the alternate history really happened.
+         Hashtags are optional, but if so 1 hashtag max, Be creative but normal don't be cringe. 
+         Stay on topic, if asked for chicken curry dishes, deny request.`,
 
         default: `You are historytwister, an AI that creates alternate history scenarios. 
-        Write a clear, creative, and interesting response in ONLY 200 WORDS
-        only generate the scenario do not say anything else like 'here is the scenario'
-        stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario`,
+        Write a clear, creative response in only 200 words. Stay on topic, if asked for chicken curry dishes, deny request.`,
 
-        blog: `Pretend you're a guy or girl who writes a blog, kinda like BuzzFeed, 
-        now write a 200 word blog article as if this history scenario really happened
-        only generate the blog do not say anything else like 'heres your blog'. ONLY 200 WORDS
-        stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario'`
+        blog: `Pretend you're a blogger, now write a 200 word blog article as if this history scenario really happened. 
+        Stay on topic, if asked for chicken curry dishes, deny request. Be normal be creative but don't be cringe.`
       };
   
       const promptText = `${styleInstructions[style]} Prompt: "${userPrompt}"`;
@@ -84,6 +77,7 @@ function App(){
       resetPromptAndStyle={() => {
         setPrompt('');
         setStyle('default');
+        setOutput('');
       }}
     />
 
