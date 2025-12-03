@@ -8,9 +8,10 @@ interface StyleSelectorProps {
 
 const StyleSelector: React.FC<StyleSelectorProps> = ({ setStyle}) => {
     return(
-        <div>
-            <button onClick={() => setStyle("newspaper")}> Newspaper </button>
+        <div className="style-select-container">
             <button onClick={() => setStyle("blog")}> Default </button>
+            <button onClick={() => setStyle("newspaper")}> Newspaper </button>
+            
             <button onClick={() => setStyle("tweet")}> Tweet </button>
             <button onClick={() => setStyle("blog")}> Blog </button>
         </div>

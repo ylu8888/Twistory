@@ -6,8 +6,8 @@ interface OutputDisplayProps {
 
 const OutputDisplay: React.FC<OutputDisplayProps> = ({ output }) => {
   return (
-    <div>
-      <h2>AI Output:</h2>
+    <div className="output-container">
+      
       <p>{output}</p>
     </div>
   );

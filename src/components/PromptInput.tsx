@@ -6,18 +6,20 @@ interface PromptInputProps {
     //and a set prompt, taking user input and storing it
     prompt: string,
     setPrompt: (value: string) => void; 
+    onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const PromptInput: React.FC<PromptInputProps> = ({ prompt, setPrompt}) => {
+const PromptInput = ({ prompt, setPrompt, onKeyPress }: PromptInputProps) => {
     return(
         <div>
-           <label htmlFor="prompt">Enter your "what-if" prompt: </label>
-
-           <textarea
+           <input
+            type="text"
+            className="prompt-searchbar"
             value={prompt}
-            //every time you change input value, it puts value inside our prompt variable
-            onChange={(e) => setPrompt(e.target.value)} 
-           />
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyPress={onKeyPress}
+            placeholder='Enter your "what-if" prompt...'
+            />
         </div>
     )
 }

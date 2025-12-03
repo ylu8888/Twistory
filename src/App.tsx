@@ -1,4 +1,5 @@
 import {useState} from "react";
+import type { KeyboardEvent } from "react";
 import PromptInput from './components/PromptInput';
 import StyleSelector from './components/StyleSelector';
 import OutputDisplay from './components/OutputDisplay';
@@ -16,7 +17,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 function App(){
   const[output, setOutput] = useState(''); //Ai generated output
   const[prompt, setPrompt] = useState(''); //users input prompt
-  const[style, setStyle] = useState('newspaper'); //defaulted on newspaper
+  const[style, setStyle] = useState('default'); //defaulted on newspaper
   const [loading, setLoading] = useState(false); //loading state while waiting for ai response
 
   const ai = new GoogleGenAI({ apiKey });
@@ -26,7 +27,7 @@ function App(){
 
       const styleInstructions: Record<string, string> = {
         newspaper: `You are HistoryTwister, an AI that creates alternate history scenarios. 
-        Write a concise newspaper article, but keep it relatively short and readable
+        Write a concise newspaper article, but keep it relatively short and readable. ONLY 250 WORDS MAX.
         only generate the newspaper do not say anything else like 'heres the newspaper'
         stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario`,
 
@@ -36,13 +37,13 @@ function App(){
         stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario'`,
 
         default: `You are historytwister, an AI that creates alternate history scenarios. 
-        Write a clear, creative, and interesting response in 500 words.
+        Write a clear, creative, and interesting response in ONLY 200 WORDS
         only generate the scenario do not say anything else like 'here is the scenario'
         stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario`,
 
         blog: `Pretend you're a guy or girl who writes a blog, kinda like BuzzFeed, 
-        now write a 500 word blog article as if this history scenario really happened
-        only generate the blog do not say anything else like 'heres your blog
+        now write a 200 word blog article as if this history scenario really happened
+        only generate the blog do not say anything else like 'heres your blog'. ONLY 200 WORDS
         stay on topic, if prompted to do something else like "give me recipes for curry dishes" then say that you can't do it and ask for a althistory scenario'`
       };
   
@@ -63,13 +64,15 @@ function App(){
     }
   }
 
-  const handleGenerate = async () => {
-    if (!prompt.trim()) return;
-    setLoading(true);
-    const result = await generateAI(prompt, style);
-    setOutput(result);
-    setLoading(false);
-  };
+  //generate Ai output when user presses enter
+  const handleKeyPress = async (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      setLoading(true);
+      const result = await generateAI(prompt, style);
+      setOutput(result);
+      setLoading(false);
+    }
+  }
 
   return (
     <>
@@ -78,17 +81,9 @@ function App(){
     <Navbar></Navbar>
 
     <HeroSection>
-      <PromptInput prompt={prompt} setPrompt={setPrompt} />
+      <PromptInput prompt={prompt} setPrompt={setPrompt} onKeyPress={handleKeyPress} />
 
       <StyleSelector style={style} setStyle={setStyle} />
-
-      <button 
-        onClick={handleGenerate} 
-        disabled={!prompt.trim() || loading}
-        className="generate-btn"
-      >
-        {loading ? "Generating..." : "Generate"}
-      </button>
 
       <OutputDisplay output={output} />
     </HeroSection>
