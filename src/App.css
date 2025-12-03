@@ -257,6 +257,7 @@ body, html {
 .why-built-container {
   max-width: 900px;
   margin: 80px auto;
+  margin-top: 140px;
   padding: 0 20px;
   text-align: center;
   color: white;
