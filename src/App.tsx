@@ -19,6 +19,7 @@ function App(){
   const[prompt, setPrompt] = useState(''); //users input prompt
   const[style, setStyle] = useState('default'); //defaulted on newspaper
   const [loading, setLoading] = useState(false); //loading state while waiting for ai response
+  const [launched, setLaunched] = useState(false);
 
   const ai = new GoogleGenAI({ apiKey });
 
@@ -78,9 +79,9 @@ function App(){
     <>
     <div className="app-container">
 
-    <Navbar></Navbar>
+    <Navbar resetLaunch={() => setLaunched(false)} />
 
-    <HeroSection>
+    <HeroSection launched={launched} setLaunched={setLaunched}>
       <PromptInput prompt={prompt} setPrompt={setPrompt} onKeyPress={handleKeyPress} />
 
       <StyleSelector style={style} setStyle={setStyle} />

@@ -3,11 +3,12 @@ import { useState } from "react";
 import shuttleImg from '../assets/spaceshuttle.png';
 
 interface HeroSectionProps {
+  launched: boolean;
+  setLaunched: (value: boolean) => void;
   children?: ReactNode;
 }
 
-const HeroSection = ({ children }: HeroSectionProps) => {
-  const [launched, setLaunched] = useState(false);
+const HeroSection = ({ launched, setLaunched, children }: HeroSectionProps) => {
 
   return (
 
