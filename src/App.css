@@ -366,7 +366,7 @@ body, html {
 
 .cockpit-ui {
   position: absolute;
-  top: 20%;     
+  top: 19%;     
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
@@ -385,7 +385,7 @@ body, html {
 /* AI INPUT SEARCH BAR */
 
 .prompt-searchbar {
-  height: 18px;
+  height: 15px;
   width: 100%;
   max-width: 65%;
   padding: 12px 16px;
@@ -408,6 +408,7 @@ body, html {
 
 .style-select-container{
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* STYLE SELECTOR BUTTONS */
@@ -418,7 +419,7 @@ body, html {
   padding: 5px;
   margin-left: 4px;
   margin-right: 4px;
-  margin-bottom: 3px;
+
   border-radius: 10px;
   cursor: pointer;
   border-color: #7a30ff;
@@ -437,11 +438,31 @@ body, html {
   border-color: #ebe9ed;
 }
 
-.generate-btn{
+/* .generate-btn{
   width: 80px;
   height: 30px;
   font-size: 12px;
   padding: 5px;
   border-radius: 10px;
   margin-top: 4px;
+} */
+
+/* OUTPUT CONTAINER  */
+
+.output-container {
+  position: absolute;
+  top: 112%;   
+  background-color: rgba(0, 0, 0, 0.8);       
+  color: rgb(228, 222, 222);               
+  border-radius: 20px;          
+  padding: 20px;                
+  margin-top: 2%;    
+  max-width: 800px;             
+  width: 77%;    
+  justify-content: center;
+  margin-left: 9%;
+  display: flex;
+  font-size: 14px;                
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+  overflow-wrap: break-word;    
 }

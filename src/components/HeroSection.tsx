@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
 import shuttleImg from '../assets/spaceshuttle.png';
 
 interface HeroSectionProps {

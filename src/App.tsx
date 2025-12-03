@@ -27,18 +27,22 @@ function App(){
     try {
 
       const styleInstructions: Record<string, string> = {
+        default: `You are historytwister, an AI that creates alternate history scenarios. 
+        Write a clear, creative response in only 150 words max. Stay on topic, if asked for chicken curry dishes, deny request.
+        Just generate the alternative history, do not say "ok here is your generated alternative history"`,
+
         newspaper: `You are HistoryTwister, an AI that creates alternate history scenarios. 
-        Write a concise newspaper article, only 200 words max. Stay on topic, if asked for chicken curry dishes, deny request.`,
+        Write a concise newspaper article, only 150 words max. Stay on topic, if asked for chicken curry dishes, deny request.
+        Just generate the newspaper, do not say "ok here is your alternative newspaper"`,
 
         tweet: `Pretend you are twitter users. Write 5 tweets as if the alternate history really happened.
          Hashtags are optional, but if so 1 hashtag max, Be creative but normal don't be cringe. 
+         Just generate the tweets, do not say "ok here is your generated alternative history tweets"
          Stay on topic, if asked for chicken curry dishes, deny request.`,
 
-        default: `You are historytwister, an AI that creates alternate history scenarios. 
-        Write a clear, creative response in only 200 words. Stay on topic, if asked for chicken curry dishes, deny request.`,
-
-        blog: `Pretend you're a blogger, now write a 200 word blog article as if this history scenario really happened. 
-        Stay on topic, if asked for chicken curry dishes, deny request. Be normal be creative but don't be cringe.`
+        blog: `Pretend you're a blogger, now write a max 150 word blog article as if this history scenario really happened. 
+        Stay on topic, if asked for chicken curry dishes, deny request. Be normal be creative but don't be cringe.
+        Just generate the blog, do not say "ok here is your generated alternative history blog"`
       };
   
       const promptText = `${styleInstructions[style]} Prompt: "${userPrompt}"`;
