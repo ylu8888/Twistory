@@ -1,18 +1,22 @@
+import React from "react";
+
 interface NavbarProps {
-  resetLaunch: () => void; // function from App
+  resetLaunch: () => void; 
+  resetPromptAndStyle: () => void;
 }
 
-const Navbar = ({ resetLaunch }: NavbarProps) => {
+const Navbar: React.FC<NavbarProps> = ({ resetLaunch, resetPromptAndStyle }) => {
 
-  const scrollToTop = () => {
+  const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    resetLaunch(); // ✅ Reset launched state
+    resetLaunch();
+    resetPromptAndStyle();
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <h1 className="logo" onClick={scrollToTop}>Twistory</h1>
+        <h1 className="logo" onClick={handleLogoClick}>Twistory</h1>
       </div>
 
       <div className="navbar-right">

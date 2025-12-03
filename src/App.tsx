@@ -79,7 +79,13 @@ function App(){
     <>
     <div className="app-container">
 
-    <Navbar resetLaunch={() => setLaunched(false)} />
+    <Navbar
+      resetLaunch={() => setLaunched(false)}
+      resetPromptAndStyle={() => {
+        setPrompt('');
+        setStyle('default');
+      }}
+    />
 
     <HeroSection launched={launched} setLaunched={setLaunched}>
       <PromptInput prompt={prompt} setPrompt={setPrompt} onKeyPress={handleKeyPress} />
