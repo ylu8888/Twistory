@@ -65,6 +65,7 @@ function App(){
       const result = await generateAI(prompt, style);
       setOutput(result);
       setLoading(false);
+      console.log(loading);
     }
   }
 
