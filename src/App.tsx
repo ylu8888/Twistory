@@ -106,7 +106,7 @@ function App(){
       resetPromptAndStyle={() => {
         setPrompt('');
         setStyle('default');
-        setOutput('');
+        setDisplayedOutput('');
       }}
     />
 
