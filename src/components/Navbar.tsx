@@ -22,8 +22,15 @@ const Navbar: React.FC<NavbarProps> = ({ resetLaunch, resetPromptAndStyle }) => 
       <div className="navbar-right">
         <a href="#how">How It Works</a>
         <a href="#about">About Twistory</a>
-        <a 
+        {/* <a 
           href="https://www.linkedin.com/in/yang-lu-a47441265/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact
+        </a> */}
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=yanglu91603@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >

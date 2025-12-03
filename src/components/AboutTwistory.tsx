@@ -12,7 +12,8 @@ const AboutTwistory = () => {
 
       <p className="why-built-text">
         This website started as a personal CS project where I could combine my passion for history with my interest in coding.  
-        I built it using <strong>React + TypeScript</strong>, hosted on <strong>Azure Static Web Apps</strong>, and used a <strong>serverless API proxy via Azure Functions</strong> to securely access the API.
+        I built it using React + TypeScript, hosted on Azure Static Web Apps, and used a serverless API proxy via Azure Functions
+        to securely access the API.
       </p>
 
       <p className="why-built-text">
