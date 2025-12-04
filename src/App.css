@@ -431,11 +431,13 @@ body, html {
 /* Twist Button*/
 .twist-btn {
   transform: translateY(-2px);
-  height: 40px;
-  padding: 0px 16px;
+  height: 41px;
+  padding: 0px 14px;
   background: linear-gradient(180deg, #331191 0%, #8a55fb 50%, #3d17a6 100%);
   color: white;
-  border: 1.1px solid #7a30ff;
+  border: 2px solid #7a30ff;
+  border-left: 0px;
+  
   border-radius: 0 25px 25px 0; 
   cursor: pointer;
   transition: 0.25s ease;
@@ -453,14 +455,14 @@ body, html {
 }
 
 .spinner {
-  width: 18px;
+  width: 16px;
   height: 16px;
   border: 3px solid white;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  margin-left: 7px;
-  animation: spin 1.5s linear infinite;
-  transform: translateX(-3px);
+  /* padding-left: 8px; */
+  margin-left: 4px;
+  animation: spin 1s linear infinite;
   
 }
 
