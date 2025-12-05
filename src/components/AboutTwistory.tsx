@@ -27,7 +27,7 @@ const AboutTwistory = () => {
         </div>
         <div className="icon-card">
           ⚙️
-          <p>60 Queries/hr</p>
+          <p>60 Queries per hour</p>
         </div>
         <div className="icon-card">
           💻
