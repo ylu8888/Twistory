@@ -18,4 +18,5 @@
 
 ## Tweet
 
-<img width="2534" height="1154" alt="image" src="https://github.com/user-attachments/assets/6728eed8-be42-44d9-8be8-32596d4b4272" />
+<img width="1577" height="991" alt="image" src="https://github.com/user-attachments/assets/120edc3f-81a8-4f00-b5bb-c99ae14f2d81" />
+
