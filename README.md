@@ -6,7 +6,7 @@
 
 ## WEBSITE PREVIEW
 
-<img width="2530" height="1151" alt="image" src="https://github.com/user-attachments/assets/816598ec-4584-4bdf-9188-a7398dd07184" />
+<img width="2521" height="1333" alt="image" src="https://github.com/user-attachments/assets/f70051a6-bd2c-4333-abb5-1c3d15982341" />
 
 ## Prompt Input
 
